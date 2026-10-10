@@ -204,7 +204,9 @@ h3 { font-size: 26px; line-height: 1.2; letter-spacing: -.01em; }
 
 .hero { padding-top: 32px; }
 
-.hero__grid { display: grid; gap: 48px; align-items: center; }
+.hero__grid { display: grid; gap: 56px; align-items: center; }
+.hero__copy { order: 1; }
+.hero__portrait { order: 2; }
 
 .hero__portrait { position: relative; padding-top: 4%; }
 .hero__panel {
@@ -597,8 +599,6 @@ h3 { font-size: 26px; line-height: 1.2; letter-spacing: -.01em; }
 
   .hero { padding-top: 64px; }
   .hero__grid { grid-template-columns: 1.1fr .9fr; gap: 80px; }
-  .hero__copy { order: 1; }
-  .hero__portrait { order: 2; }
   .hero__lede { font-size: 20px; }
 
   .logos { margin-top: 112px; display: flex; align-items: center; gap: 56px; padding: 40px 0; }
