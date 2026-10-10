@@ -15,7 +15,9 @@
   <title>Carolyn Quintin | Career Coaching, LinkedIn for Business, Leadership Training</title>
   <meta name="description" content="Career coaching for experienced professionals, LinkedIn for small businesses, and leadership training for manufacturers. St. Petersburg, FL and across the U.S.">
   <meta name="theme-color" content="#233D4D">
-  <link rel="icon" href="assets/img/compass.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Lustria&display=swap" rel="stylesheet">
@@ -37,7 +39,7 @@
       </nav>
 
       <a class="brand" href="#top" aria-label="Carolyn Quintin, home">
-        <img src="assets/img/carolyn-quintin-logo.png" alt="Carolyn Quintin" width="1200" height="360">
+        <img src="assets/img/carolyn-quintin-logo.png" alt="Carolyn Quintin" width="1196" height="184">
       </a>
 
       <nav class="site-nav site-nav--right" aria-label="Secondary">
@@ -149,6 +151,22 @@
       </div>
     </section>
 
+    <!-- Career: feeling stuck -->
+    <section class="section stuck" id="career">
+      <div class="container stuck__grid">
+        <figure class="stuck__photo" data-reveal>
+          <span class="stuck__frame" aria-hidden="true"></span>
+          <img src="assets/img/feeling-stuck.jpg" alt="An experienced professional in a suit reviewing papers at his desk" loading="lazy" width="1100" height="620">
+        </figure>
+        <div class="stuck__copy" data-reveal>
+          <h2>Feeling <em>stuck</em> in a role that no longer excites you?</h2>
+          <p class="stuck__question">Wondering if it&rsquo;s &ldquo;too late&rdquo; to start over, or worried no one will hire someone your age?</p>
+          <p>If you&rsquo;re 50+ and craving a fresh start, you&rsquo;ve already done the hardest part: you&rsquo;ve admitted you want more. You&rsquo;ve spent years building experience, solving problems, and leading in ways younger professionals can&rsquo;t match. Now it&rsquo;s time to channel that expertise into a career that inspires you every morning.</p>
+          <a class="btn btn--light" href="#contact" data-interest="career">Let's do this</a>
+        </div>
+      </div>
+    </section>
+
     <!-- 5. LinkedIn for Business -->
     <section class="section linkedin" id="linkedin">
       <div class="container linkedin__grid">
@@ -189,7 +207,7 @@
 
     <!-- 6. Meet Carolyn -->
     <section class="section meet">
-      <div class="container meet__grid">
+      <div class="container meet__grid meet__grid--flip">
         <figure class="meet__photo" data-reveal>
           <span class="meet__frame" aria-hidden="true"></span>
           <img src="assets/img/carolyn-waterfront.jpg" alt="Carolyn Quintin on the St. Petersburg waterfront" loading="lazy" width="512" height="512">
@@ -204,34 +222,125 @@
     </section>
 
     <!-- 7. Testimonials -->
-    <section class="section reviews">
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container reviews__head" data-reveal>
+        <div>
+          <h2 id="reviews-title">What clients say</h2>
+          <p>Career changers, business owners and leaders, in their own words.</p>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn slider-btn--prev" type="button" aria-label="Previous testimonials" data-prev><svg viewBox="0 0 32 12" aria-hidden="true"><path d="M0 6h31M26 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+          <button class="slider-btn" type="button" aria-label="Next testimonials" data-next><svg viewBox="0 0 32 12" aria-hidden="true"><path d="M0 6h31M26 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+        </div>
+      </div>
+
+      <div class="slider" data-slider data-reveal>
+        <ul class="slider__track" tabindex="0" aria-label="Client testimonials" data-track>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I highly recommend Carolyn&mdash;she&rsquo;s a true career coach expert! With 25+ years in healthcare leadership, I improved my resume, LinkedIn, and interviewing skills. Weekly coaching, thoughtful questions, and actionable strategies helped me land a fantastic leadership role with an exceptional healthcare system.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/cheryl-cannon.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Cheryl Cannon</strong> Career coaching client</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I had the opportunity to train with Carolyn on LinkedIn and learned so much in just three hours. I&rsquo;ve already seen immediate results in my business from applying her strategies. I highly recommend a one-on-one session and look forward to partnering with her on future projects.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/tammy-levent.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Tammy Levent</strong> LinkedIn training client</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I worked with Carolyn for over three years at Harley-Davidson during the Manufacturing Transformation. She is the ultimate professional trainer, with expertise in leadership, conflict management, and team building. Skilled with even the toughest audiences and strong in workshop design, Carolyn consistently delivers excellence in facilitation and training.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/rick-hardin.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Rick Hardin</strong> Harley-Davidson</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>Working with Carolyn was an absolute treat as I navigated a career change. Professional, knowledgeable, and supportive, she asked the tough questions that made me truly reflect on what I wanted. With her guidance, I transitioned into a new career, and I am forever grateful for her insight and support.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/jennifer-joern.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Jennifer Joern</strong> Career change client</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>As a new small business owner, marketing wasn&rsquo;t my strength. Carolyn gave me tools to improve my website and profile, connected me with helpful contacts, and suggested groups to join. She was instrumental in positioning my business in the marketplace and strengthening my presentation skills.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/beverly-hathorn.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Beverly Hathorn</strong> Small business owner</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I worked with Carolyn for several years as she developed and facilitated leadership courses for our manufacturing leaders. Her personality and &ldquo;can do&rdquo; attitude made her effective with everyone, from shop floor employees to executives. Flexible, creative, and engaging, Carolyn was an ideal partner for Harley-Davidson Motor Company.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/dave-dessart.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Dave Dessart</strong> Harley-Davidson Motor Company</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>Working with Carolyn as my resume coach exceeded expectations. She took time to understand my career goals and tailored my resume to reflect my unique strengths&mdash;unlike a prior coach who delivered a generic version. Carolyn&rsquo;s professionalism, personalized guidance, and support throughout the process make her highly recommended.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/joey-rodriguez.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Joey Rodriguez, Sr., CBO</strong> Resume coaching client</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>I first hired Carolyn to address conflicts in a diverse workforce. Her knowledge and approach built awareness and understanding, and I&rsquo;ve since partnered with her on additional diversity initiatives. Carolyn&rsquo;s programs are engaging, interactive, and creative, encouraging participation and delivering practical learning. I highly recommend her expertise.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/kathryn-davanzo.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Kathryn Davanzo</strong> Leadership training client</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>For the past two years, Carolyn Quintin has been my mentor and career coach, guiding me in resume improvement, LinkedIn strategies, and professional networking. Her attention to detail and authentic communication profoundly shaped my career direction. I&rsquo;m honored to give Carolyn my highest recommendation for her impactful support.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/francisco-oller-garcia.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Francisco Oller Garcia, MBA</strong> Career coaching client</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="t-card">
+              <figure>
+                <span class="t-card__mark" aria-hidden="true">&ldquo;</span>
+                <blockquote>Carolyn has facilitated meetings and planning sessions for my agency, providing invaluable team building for executives and supervisors. She creates a trusted, comfortable space where every voice is valued, even on challenging issues. Her preparation and skill are unmatched. I recommend her without reservation.</blockquote>
+                <figcaption class="person">
+                  <img src="assets/img/people/lisa-jackson.jpg" alt="" loading="lazy" width="200" height="200">
+                  <span><strong>Lisa Jackson, GPC</strong> Team facilitation client</span>
+                </figcaption>
+              </figure>
+            </li>
+        </ul>
+      </div>
+
       <div class="container">
-        <div class="section-head" data-reveal>
-          <h2>What clients say</h2>
-        </div>
-        <div class="reviews__grid">
-          <figure class="review" data-reveal>
-            <blockquote>&ldquo;I highly recommend Carolyn&mdash;she&rsquo;s a true career coach expert! Weekly coaching, thoughtful questions, and actionable strategies helped me land a fantastic leadership role with an exceptional healthcare system.&rdquo;</blockquote>
-            <figcaption class="person">
-              <img src="assets/img/people/cheryl-cannon.jpg" alt="" loading="lazy" width="200" height="200">
-              <span><strong>Cheryl Cannon</strong> Career coaching</span>
-            </figcaption>
-          </figure>
-          <figure class="review" data-reveal>
-            <blockquote>&ldquo;As a new small business owner, marketing wasn&rsquo;t my strength. She was instrumental in positioning my business in the marketplace and strengthening my presentation skills.&rdquo;</blockquote>
-            <figcaption class="person">
-              <img src="assets/img/people/beverly-hathorn.jpg" alt="" loading="lazy" width="200" height="200">
-              <span><strong>Beverly Hathorn</strong> Small business owner</span>
-            </figcaption>
-          </figure>
-          <figure class="review" data-reveal>
-            <blockquote>&ldquo;She is the ultimate professional trainer, with expertise in leadership, conflict management, and team building. Skilled with even the toughest audiences and strong in workshop design, Carolyn consistently delivers excellence in facilitation and training.&rdquo;</blockquote>
-            <figcaption class="person">
-              <img src="assets/img/people/rick-hardin.jpg" alt="" loading="lazy" width="200" height="200">
-              <span><strong>Rick Hardin</strong> Harley-Davidson</span>
-            </figcaption>
-          </figure>
-        </div>
+        <div class="slider__progress" aria-hidden="true"><span data-progress></span></div>
       </div>
     </section>
 
@@ -269,45 +378,49 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="site-footer__top">
-        <div class="site-footer__brand">
-          <img src="assets/img/carolyn-quintin-logo-light.png" alt="Carolyn Quintin" width="1200" height="360" loading="lazy">
-          <p>Career coaching, LinkedIn for business and leadership training. Based in St. Petersburg, Florida, working online across the U.S.</p>
+      <div class="site-footer__grid">
+        <nav class="footer-col footer-col--nav" aria-label="Footer">
+          <h2 class="footer-title">Navigate</h2>
+          <ul class="footer-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="https://carolynquintin.com/about">About</a></li>
+            <li><a href="https://carolynquintin.com/career-coaching">Career coaching</a></li>
+            <li><a href="#linkedin">LinkedIn for business</a></li>
+            <li><a href="https://carolynquintin.com/manufacturing-leadership">Leadership training</a></li>
+            <li><a href="https://carolynquintin.com/blog-coming-soon">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col footer-col--badge">
+          <img src="assets/img/carolyn-quintin-badge.png" alt="Carolyn Quintin, career coaching and leadership training" width="640" height="640" loading="lazy">
+          <p>Online career coaching, LinkedIn for business and leadership training from St.&nbsp;Petersburg, Florida, across the U.S.</p>
         </div>
 
-        <nav class="site-footer__col" aria-label="Services">
-          <h2>Services</h2>
-          <a href="https://carolynquintin.com/career-coaching">Career coaching</a>
-          <a href="#linkedin">LinkedIn for business</a>
-          <a href="https://carolynquintin.com/manufacturing-leadership">Leadership training</a>
-        </nav>
+        <div class="footer-col footer-col--follow">
+          <h2 class="footer-title">Follow</h2>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/in/carolynquintin" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/CarolynQuintin/" rel="noopener">Facebook</a></li>
+          </ul>
 
-        <nav class="site-footer__col" aria-label="Explore">
-          <h2>Explore</h2>
-          <a href="https://carolynquintin.com/about">About</a>
-          <a href="https://carolynquintin.com/blog-coming-soon">Blog</a>
-          <a href="#contact">Contact</a>
-          <a href="https://www.linkedin.com/in/carolynquintin" rel="noopener">LinkedIn</a>
-          <a href="https://www.facebook.com/CarolynQuintin/" rel="noopener">Facebook</a>
-        </nav>
-
-        <form class="site-footer__news" action="#" method="post" data-form>
-          <h2>Sign up for exclusive content</h2>
-          <p>Job search and LinkedIn ideas from Carolyn, straight to your inbox.</p>
-          <label class="visually-hidden" for="news-name">First name</label>
-          <input id="news-name" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required>
-          <label class="visually-hidden" for="news-email">Email</label>
-          <input id="news-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
-          <button class="btn btn--block" type="submit">Subscribe</button>
-          <p class="form-thanks" role="status" hidden>You're on the list. Thank you.</p>
-        </form>
+          <form class="footer-news" action="#" method="post" data-form>
+            <p class="footer-news__title">Sign up for exclusive content</p>
+            <label class="visually-hidden" for="news-name">First name</label>
+            <input id="news-name" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required>
+            <label class="visually-hidden" for="news-email">Email</label>
+            <input id="news-email" name="email" type="email" placeholder="Email address" autocomplete="email" required>
+            <button class="btn btn--block" type="submit">Subscribe</button>
+            <p class="form-thanks" role="status" hidden>You're on the list. Thank you.</p>
+          </form>
+        </div>
       </div>
 
       <div class="site-footer__bottom">
-        <p>&copy; <span data-year>2026</span> Quintin and Associates, Inc.</p>
+        <p>&copy; <span data-year>2026</span> Carolyn Quintin, Quintin and Associates, Inc.</p>
         <nav aria-label="Legal">
-          <a href="https://carolynquintin.com/terms">Terms</a>
-          <a href="https://carolynquintin.com/privacy-policy">Privacy</a>
+          <a href="https://carolynquintin.com/terms">Terms and Conditions</a>
+          <a href="https://carolynquintin.com/privacy-policy">Privacy Policy</a>
           <a href="#top">Back to top</a>
         </nav>
       </div>
