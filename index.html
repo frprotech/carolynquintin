@@ -1,0 +1,466 @@
+<!doctype html>
+<!--
+  Carolyn Quintin, homepage concept
+  Built as a reference for a Showit rebuild. Brand colours, fonts and photography are taken from carolynquintin.com.
+
+  Hero headline options (all 8 words or fewer):
+    1. Your experience deserves to be seen.          (used: speaks to job seekers and business owners at once)
+    2. Be seen for the experience you've earned.
+    3. Good experience should never go unnoticed.
+
+  Build notes for Showit:
+    - Client logos are her existing white PNGs, tinted navy here with an SVG filter. In Showit, export navy versions or set them on a navy tint.
+    - The compass mark is redrawn as a small SVG from her logo lockup; swap in the original vector if available.
+    - Cheryl Cannon's photo is cropped to hide the "#HIRING" frame.
+    - The form is a layout reference only. Connect it to her Kit or Showit form, with the three interests as a single-choice field.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carolyn Quintin | Career Coaching, LinkedIn for Business, Leadership Training</title>
+<meta name="description" content="Career coaching for experienced professionals, LinkedIn for small businesses, and leadership training for manufacturers. St. Petersburg, FL and across the U.S.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Lustria&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --turquoise: #2CA5A3;
+    --navy: #233D4D;
+    --blush: #FDE8E2;
+    --offwhite: #FAFAFA;
+    --white: #FFFFFF;
+    --line: rgba(35, 61, 77, .18);
+    --serif: "Lustria", Georgia, serif;
+    --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+    --pad: 64px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--white);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0; text-wrap: balance; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 31px; }
+  h3 { font-size: 26px; }
+  p { margin: 0; }
+  p + p { margin-top: 1em; }
+
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: var(--pad) 0; }
+  .measure { max-width: 34em; }
+
+  /* Two button styles, nothing else */
+  .btn {
+    display: inline-block;
+    background: var(--turquoise);
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 30px;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color .15s;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--navy); }
+  .link {
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--turquoise);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    transition: color .15s;
+  }
+  .link:hover, .link:focus-visible { color: var(--turquoise); }
+  :focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; }
+
+  /* 1. Header */
+  .header { border-bottom: 1px solid var(--line); padding: 28px 0 20px; }
+  .header__inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 22px; }
+  .brand { text-align: center; text-decoration: none; flex-basis: 100%; order: -1; }
+  .brand__logo { display: block; position: relative; width: 240px; aspect-ratio: 741 / 79; margin: 0 auto; overflow: hidden; }
+  .brand__logo img { position: absolute; width: 107.96%; max-width: none; height: auto; left: -3.64%; top: -91.14%; }
+  .brand__tag span { white-space: nowrap; }
+  .brand__tag {
+    display: block;
+    margin-top: 14px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .nav { display: flex; gap: 22px; justify-content: center; }
+  .nav a, .nav--right a:not(.btn) {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .nav a:hover { color: var(--turquoise); }
+  .nav--right .btn { display: none; white-space: nowrap; }
+  .nav-group { display: flex; gap: 22px; }
+
+  /* 2. Hero */
+  .hero__grid { display: grid; gap: 40px; align-items: center; }
+  .hero__photo { aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .eyebrow span { display: block; text-wrap: balance; }
+  .hero h1 { margin-bottom: 24px; text-wrap: wrap; }
+  .hero p.lede { margin-bottom: 36px; }
+
+  /* 3. Logos */
+  .logos { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 44px 0; }
+  .logos__row {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 36px 24px; align-items: center; justify-items: center;
+  }
+  .logos img { filter: url(#navy-tint); opacity: .62; width: auto; }
+  .logos .hd { height: 50px; }
+  .logos .ge { height: 26px; }
+  .logos .osram { height: 24px; }
+  .logos .ut { height: 34px; }
+  .logos .eckerd { height: 30px; }
+  .logos .score { height: 42px; }
+
+  /* 4. Services */
+  .services h2 { margin-bottom: 48px; }
+  .cards { display: grid; gap: 28px; }
+  .card { border: 1px solid var(--navy); padding: 14px; display: flex; flex-direction: column; background: var(--white); }
+  .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .card__body { padding: 28px 12px 14px; display: flex; flex-direction: column; flex: 1; }
+  .card h3 { margin-bottom: 14px; }
+  .card p { font-size: 17px; margin-bottom: 24px; }
+  .card .link { align-self: flex-start; }
+  .card__note {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  /* 5. LinkedIn for Business */
+  .linkedin { background: var(--blush); }
+  .linkedin__grid { display: grid; gap: 56px; }
+  .linkedin h2 { margin-bottom: 24px; max-width: 13em; }
+  .linkedin p { margin-bottom: 36px; }
+  .quote { margin: 0; }
+  .quote blockquote { margin: 0 0 28px; font-family: var(--serif); font-size: 26px; line-height: 1.4; }
+  .person { display: flex; align-items: center; gap: 16px; font-size: 15px; font-weight: 500; }
+  .person img, .person .crop { width: 56px; height: 56px; object-fit: cover; flex: none; }
+  .person span { display: block; font-weight: 400; }
+  .crop { overflow: hidden; position: relative; }
+  .crop img { position: absolute; width: 150%; height: 150%; max-width: none; right: -14%; top: -4%; }
+
+  /* 6. Meet Carolyn */
+  .meet { background: var(--offwhite); }
+  .meet__grid { display: grid; gap: 40px; align-items: center; }
+  .meet__photo { border: 1px solid var(--navy); padding: 14px; }
+  .meet__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 100%; }
+  .meet h2 { margin-bottom: 24px; }
+  .meet .measure { margin-bottom: 32px; }
+
+  /* 7. Testimonials */
+  .reviews h2 { margin-bottom: 48px; }
+  .reviews__grid { display: grid; gap: 48px; }
+  .review { border-top: 1px solid var(--navy); padding-top: 28px; display: flex; flex-direction: column; margin: 0; }
+  .review blockquote { margin: 0 0 28px; flex: 1; }
+
+  /* 8. Closing band + footer */
+  .closing { background: var(--navy); color: var(--white); }
+  .closing__grid { display: grid; gap: 48px; }
+  .compass { width: 26px; height: 26px; margin-bottom: 28px; }
+  .closing h2 { margin-bottom: 20px; max-width: 10em; }
+  .form { display: grid; gap: 22px; }
+  .form label, .form legend { display: block; font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+  .form input[type="text"], .form input[type="email"] {
+    width: 100%; height: 54px; padding: 0 16px;
+    font: inherit; color: var(--navy);
+    background: var(--white); border: 1px solid var(--white); border-radius: 0;
+  }
+  .form fieldset { border: 0; padding: 0; margin: 0; }
+  .choice { display: flex; align-items: center; gap: 12px; padding: 6px 0; font-size: 17px; cursor: pointer; }
+  .choice input { width: 18px; height: 18px; margin: 0; accent-color: var(--turquoise); }
+  .form .btn { justify-self: start; margin-top: 6px; }
+  .form .btn:hover, .form .btn:focus-visible { background: var(--white); color: var(--navy); }
+  .thanks { font-family: var(--serif); font-size: 26px; }
+
+  .footer { padding: 32px 0; font-size: 14px; }
+  .footer__inner { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; }
+  .footer nav { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+  .footer a { text-decoration: none; }
+  .footer a:hover { color: var(--turquoise); }
+
+  @media (min-width: 760px) {
+    .logos__row { grid-template-columns: repeat(6, auto); justify-content: space-between; }
+    .cards, .reviews__grid { grid-template-columns: repeat(3, 1fr); }
+    .reviews__grid { gap: 40px; }
+  }
+
+  @media (min-width: 960px) {
+    :root { --pad: 120px; }
+    h1 { font-size: clamp(46px, 4.6vw, 56px); }
+    h2 { font-size: 40px; }
+    .wrap { padding: 0 40px; }
+
+    .header { padding: 28px 0; }
+    .header__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 32px; }
+    .brand { order: 0; }
+    .header__inner > .nav:first-child { justify-content: flex-end; }
+    .nav--right { justify-content: flex-start; align-items: center; gap: 28px; }
+    .nav--right .btn { display: inline-block; padding: 13px 22px; font-size: 13px; margin-left: auto; }
+    .nav { gap: 32px; }
+    .brand__logo { width: 300px; }
+
+    .hero.section { padding-top: 96px; }
+    .hero__grid { grid-template-columns: 5fr 6fr; gap: 64px; }
+
+    .linkedin__grid { grid-template-columns: 6fr 5fr; gap: 96px; align-items: center; }
+    .quote blockquote { font-size: 31px; }
+
+    .meet__grid { grid-template-columns: 6fr 5fr; gap: 96px; }
+    .meet__photo { order: 2; }
+
+    .closing__grid { grid-template-columns: 5fr 6fr; gap: 96px; }
+    .form { grid-template-columns: 1fr 1fr; gap: 22px 20px; }
+    .form fieldset, .form .btn { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body id="top">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="navy-tint" color-interpolation-filters="sRGB">
+    <feFlood flood-color="#233D4D"/>
+    <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+</svg>
+
+<!-- 1. Header -->
+<header class="header">
+  <div class="wrap header__inner">
+    <nav class="nav" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="https://carolynquintin.com/about">About</a>
+    </nav>
+    <a class="brand" href="#top">
+      <span class="brand__logo"><img src="https://static.showit.co/800/U9hotNLzf7YavfDPbn8BOg/shared/carolyn_quintin_main_logo_2.png" alt="Carolyn Quintin"></span>
+      <span class="brand__tag"><span>Career coaching</span> &middot; <span>LinkedIn for business</span> &middot; <span>Leadership training</span></span>
+    </a>
+    <nav class="nav nav--right" aria-label="Secondary">
+      <a href="#services">Services</a>
+      <a href="https://carolynquintin.com/contact">Contact</a>
+      <a class="btn" href="#contact">Let's talk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 2. Hero -->
+  <section class="hero section">
+    <div class="wrap hero__grid">
+      <img class="hero__photo" src="https://static.showit.co/800/ztJafAvR4iFyx46dogAAnA/shared/carolyn-quintin-midlife-career-coach-leadership-trainer.jpg" alt="Carolyn Quintin smiling on the St. Petersburg waterfront" width="512" height="512">
+      <div>
+        <p class="eyebrow"><span>Career coaching, LinkedIn and leadership training.</span> <span>St. Petersburg, FL and across the U.S.</span></p>
+        <h1>Your experience<br> deserves to&nbsp;be&nbsp;seen.</h1>
+        <p class="lede measure">I help experienced professionals land their next role, business owners win clients on LinkedIn, and manufacturers build stronger leaders.</p>
+        <a class="btn" href="#services">See how I can help</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Client logos -->
+  <section class="logos" aria-label="Organizations Carolyn has worked with">
+    <div class="wrap">
+      <ul class="logos__row">
+        <li><img class="hd" src="https://static.showit.co/400/mPtKWI6q7jDlLcuWiBOkLw/shared/harley-davidson-logo.png" alt="Harley-Davidson" loading="lazy"></li>
+        <li><img class="ge" src="https://static.showit.co/400/BukI2lK7YBIW1x0bWUuMBQ/shared/ge-areospace-logo.png" alt="GE Aerospace" loading="lazy"></li>
+        <li><img class="osram" src="https://static.showit.co/400/MQA3el6GfGBSqcXhzfB89w/shared/osram-logo.png" alt="OSRAM" loading="lazy"></li>
+        <li><img class="ut" src="https://static.showit.co/400/dw1kRn3bUc74du2jqv2-LQ/shared/university-of-tampa-logo.png" alt="The University of Tampa" loading="lazy"></li>
+        <li><img class="eckerd" src="https://static.showit.co/400/wcZ3BmsKJlr-9DbzxVZ3iw/shared/eckerd-college-logo.png" alt="Eckerd College" loading="lazy"></li>
+        <li><img class="score" src="https://static.showit.co/400/9isQLvZ2kv_Gc_bXiwU4Ag/shared/score-broward-logo.png" alt="SCORE" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Three services -->
+  <section class="services section" id="services">
+    <div class="wrap">
+      <h2>Three ways to work together</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://static.showit.co/800/M5mC8MZT_CuglgM8gHkQag/shared/career-coaching-session-reviewing-data.jpg" alt="A coaching session reviewing printed charts at a desk" loading="lazy">
+          <div class="card__body">
+            <h3>Career Coaching</h3>
+            <p>For experienced professionals ready for a new role or a new direction, at any age.</p>
+            <a class="link" href="https://carolynquintin.com/career-coaching">Explore career coaching</a>
+            <p class="card__note">Job Change Academy, virtual, coming soon.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://static.showit.co/800/4A1c_q2INIiqv5ieKbOk2A/shared/smiling-woman-uses-computer.jpg" alt="A business owner smiling at her laptop" loading="lazy" style="object-position: 50% 62%">
+          <div class="card__body">
+            <h3>LinkedIn for Business</h3>
+            <p>For business owners who want the right clients to find them, trust them and get in touch.</p>
+            <a class="link" href="#linkedin">Explore LinkedIn for business</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://static.showit.co/800/1JWnYCUloJhcfHS-d-kgOQ/shared/leadership-training-speaker.jpg" alt="A trainer presenting to a room of leaders" loading="lazy">
+          <div class="card__body">
+            <h3>Leadership Training</h3>
+            <p>For manufacturers who want supervisors and teams that communicate clearly and lead with confidence.</p>
+            <a class="link" href="https://carolynquintin.com/manufacturing-leadership">Explore leadership training</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. LinkedIn for Business -->
+  <section class="linkedin section" id="linkedin">
+    <div class="wrap linkedin__grid">
+      <div>
+        <h2>Be found on LinkedIn by the clients you want.</h2>
+        <p class="measure">I rebuild your profile so it speaks to the clients you want, set a posting strategy that fits your business, and show you how to keep it going yourself. We do it all over Zoom. I have coached people on LinkedIn since 2007 and I'm a Certified LinkedIn Marketer.</p>
+        <a class="btn" href="#contact" data-interest="linkedin">Get a free 10-minute profile review</a>
+      </div>
+      <figure class="quote">
+        <blockquote>&ldquo;I even connected with a potential client right away. She made technology fun, practical, and invaluable for my business.&rdquo;</blockquote>
+        <figcaption class="person">
+          <img src="https://static.showit.co/200/64rTQANIX9EYIHgqZiAL8w/shared/pilar_ortiz.jpg" alt="" loading="lazy">
+          Pilar Ortiz
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 6. Meet Carolyn -->
+  <section class="meet section">
+    <div class="wrap meet__grid">
+      <div class="meet__photo">
+        <img src="https://static.showit.co/800/_1nkI_QDH7zp5-0Gs3T_nw/shared/carolyn-quintin-career-coach-headshot.png" alt="Carolyn Quintin in a blue blouse, smiling" loading="lazy">
+      </div>
+      <div>
+        <h2>Hey go-getter, I'm Carolyn</h2>
+        <div class="measure">
+          <p>I'm a career coach with a Master's in Counseling, and I've spent my working life helping people through change: a new job, a growing business, a first leadership role.</p>
+          <p>I've trained leaders at Harley-Davidson and Essilor. I'm also more tech savvy than your average baby boomer. Roll Tide!</p>
+        </div>
+        <a class="link" href="https://carolynquintin.com/about">More about me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials -->
+  <section class="reviews section">
+    <div class="wrap">
+      <h2>What clients say</h2>
+      <div class="reviews__grid">
+        <figure class="review">
+          <blockquote>&ldquo;I highly recommend Carolyn&mdash;she&rsquo;s a true career coach expert! Weekly coaching, thoughtful questions, and actionable strategies helped me land a fantastic leadership role with an exceptional healthcare system.&rdquo;</blockquote>
+          <figcaption class="person">
+            <div class="crop"><img src="https://static.showit.co/200/Jw6T5mYivCJr-igO1IEYDA/shared/cheryl-cannon-photo.jpg" alt="" loading="lazy"></div>
+            <div>Cheryl Cannon<span>Career coaching</span></div>
+          </figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>&ldquo;As a new small business owner, marketing wasn&rsquo;t my strength. She was instrumental in positioning my business in the marketplace and strengthening my presentation skills.&rdquo;</blockquote>
+          <figcaption class="person">
+            <img src="https://static.showit.co/200/4RLFhFowELgXLlGTOtJzQw/shared/beverly-hathorn-photo.jpg" alt="" loading="lazy">
+            <div>Beverly Hathorn<span>Small business owner</span></div>
+          </figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote>&ldquo;She is the ultimate professional trainer, with expertise in leadership, conflict management, and team building. Skilled with even the toughest audiences and strong in workshop design, Carolyn consistently delivers excellence in facilitation and training.&rdquo;</blockquote>
+          <figcaption class="person">
+            <img src="https://static.showit.co/200/PFo9CCoItbZswQ3OotJULw/shared/rick_hardin.jpg" alt="" loading="lazy">
+            <div>Rick Hardin<span>Harley-Davidson</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Closing band -->
+  <section class="closing section" id="contact">
+    <div class="wrap closing__grid">
+      <div>
+        <svg class="compass" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 L13.6 10.4 L24 12 L13.6 13.6 L12 24 L10.4 13.6 L0 12 L10.4 10.4 Z" fill="#2CA5A3"/></svg>
+        <h2>Your Skills Deserve the Spotlight</h2>
+        <p class="measure">Tell me where you are and what you need, and I'll get back to you with a next step.</p>
+      </div>
+      <form class="form" action="#" method="post">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <fieldset>
+          <legend>I'd like help with</legend>
+          <label class="choice"><input type="radio" name="interest" value="career" required> Career coaching</label>
+          <label class="choice"><input type="radio" name="interest" value="linkedin"> LinkedIn for my business</label>
+          <label class="choice"><input type="radio" name="interest" value="leadership"> Leadership training</label>
+        </fieldset>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <nav aria-label="Footer">
+      <a href="#top">Home</a>
+      <a href="https://carolynquintin.com/about">About</a>
+      <a href="#services">Services</a>
+      <a href="https://carolynquintin.com/contact">Contact</a>
+      <a href="https://www.linkedin.com/in/carolynquintin">LinkedIn</a>
+      <a href="https://www.facebook.com/CarolynQuintin/">Facebook</a>
+    </nav>
+    <p>&copy; 2026 Quintin and Associates, Inc.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-interest]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var r = document.querySelector('input[name="interest"][value="' + a.dataset.interest + '"]');
+      if (r) r.checked = true;
+    });
+  });
+  document.querySelector('.form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    this.outerHTML = '<p class="thanks">Thank you. I’ll be in touch soon.</p>';
+  });
+</script>
+</body>
+</html>
