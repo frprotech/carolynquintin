@@ -14,6 +14,7 @@
 
   function setMenu(open) {
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     menu.hidden = !open;
     document.body.classList.toggle('menu-open', open);
     if (open) setHeaderHeight();
